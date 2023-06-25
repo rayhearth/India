@@ -1,9 +1,16 @@
 /*----- VARIABLES-----*/
+@font-face {
+  font-family: "barlow";
+  src: url(../font/Barlow-Regular.ttf);
+}
 /*----- RESET -----*/
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+ul {
+  list-style-type: none;
 }
 a {
   text-decoration: none;
@@ -115,7 +122,7 @@ header {
   background-image: url(../img/header.jpg);
   background-size: cover;
   background-position: center;
-  height: 1000px;
+  height: 100vh;
   margin-top: 80px;
   display: flex;
   justify-content: center;
@@ -136,7 +143,7 @@ header img {
   position: absolute;
 }
 /*----- NAVBAR -----*/
-header-nav {
+nav {
   position: fixed;
   width: 100%;
   height: 80px;
@@ -147,14 +154,19 @@ header-nav {
   justify-content: space-between;
   align-items: center;
 }
-header-nav a {
+nav ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+nav ul a {
   display: block;
   font-size: 20px;
   text-align: center;
   color: white;
   transition: all 0.5s;
 }
-header-nav a:hover {
+nav ul a:hover {
   transform: translateY(-3px);
   color: #dd4e7a;
 }

@@ -3,12 +3,22 @@
 @turc:#3faba8;
 @pink:#dd4e7a;
 
+
+@font-face {
+	font-family: "barlow";
+	src: url(../font/Barlow-Regular.ttf);
+}
+
 /*----- RESET -----*/
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+ul{
+	list-style-type: none;
 }
 
 a {
@@ -139,7 +149,7 @@ header{
 	background-image: url(../img/header.jpg);
 	background-size: cover;
 	background-position: center;
-	height: 1000px;
+	height: 100vh;
 	margin-top: 80px;
 	display: flex;
 	justify-content: center;
@@ -162,7 +172,7 @@ header{
 	
 	/*----- NAVBAR -----*/
 
-header-nav {
+nav {
 	position: fixed;
 	width: 100%;
     height: 80px;
@@ -172,17 +182,22 @@ header-nav {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-            a {
-                display: block;
-                font-size: 20px;
-                text-align: center;
-                color: white;
-				transition: all .5s;
-				&:hover {
-					transform: translateY(-3px);
-					color:@pink;
-				}
-            }
+	ul{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+		a {
+			display: block;
+			font-size: 20px;
+			text-align: center;
+			color: white;
+			transition: all .5s;
+			&:hover {
+				transform: translateY(-3px);
+				color:@pink;
+			}
+		}
+	}
 }
 
 
