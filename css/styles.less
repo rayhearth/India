@@ -175,9 +175,9 @@ header{
 nav {
 	position: fixed;
 	width: 100%;
-    height: 80px;
+  height: 80px;
 	top: 0;
-    background-color: #111;
+  background-color: #111;
 	z-index: 999;
 	display: flex;
 	justify-content: space-between;
@@ -375,8 +375,34 @@ a#scrolltop{
     }
 	
 	/*BURGER*/
-	div.burger {
+	.burger {
 		display: block;
+		position : fixed;
+		top: 0.25rem;
+		right: 0.25rem;
+		border-radius: 50%;
+		width: 3rem;
+		height: 3rem;
+		background-color: #dd4e7a;
+		z-index: 9999;
+		::before{
+			content: "";
+			position: absolute;
+			display: block;
+			width: 1.875rem;
+			height: 1rem;
+			background-color: #3faba8;
+			transition: all 0.3s ease-in-out;
+		}
+		::after{
+			content: "";
+			position: absolute;
+			display: block;
+			width: 1.875rem;
+			height: 2rem;
+			background-color: #3faba8;
+			transition: all 0.3s ease-in-out;
+		}
 		&.burger-open {
 			span {
 				background-color: transparent;

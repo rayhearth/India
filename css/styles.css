@@ -319,17 +319,43 @@ a#scrolltop:hover {
     max-width: 100%;
   }
   /*BURGER*/
-  div.burger {
+  .burger {
     display: block;
+    position: fixed;
+    top: 0.25rem;
+    right: 0.25rem;
+    border-radius: 50%;
+    width: 3rem;
+    height: 3rem;
+    background-color: #dd4e7a;
+    z-index: 9999;
   }
-  div.burger.burger-open span {
+  .burger ::before {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 1.875rem;
+    height: 1rem;
+    background-color: #3faba8;
+    transition: all 0.3s ease-in-out;
+  }
+  .burger ::after {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 1.875rem;
+    height: 2rem;
+    background-color: #3faba8;
+    transition: all 0.3s ease-in-out;
+  }
+  .burger.burger-open span {
     background-color: transparent;
   }
-  div.burger.burger-open span:before {
+  .burger.burger-open span:before {
     transform: rotate(45deg);
     top: 0;
   }
-  div.burger.burger-open span:after {
+  .burger.burger-open span:after {
     transform: rotate(-45deg);
     top: 0;
   }
