@@ -104,7 +104,7 @@ section a:hover {
 }
 .header-toggle span:before,
 .header-toggle span:after {
-  content: '';
+  content: "";
   position: absolute;
   display: block;
   width: 30px;
@@ -374,16 +374,19 @@ a#scrolltop:hover {
     background-color: rgba(17, 17, 17, 0.9);
     transform: translateY(-100%);
     transition: all 0.3s ease-in-out;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    justify-content: center;
   }
   nav.menu.is-open {
     transform: translateY(0);
   }
   nav.menu .logo {
     display: block;
+  }
+  nav.menu ul {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 100%;
   }
   nav.menu ul li {
     display: block;
@@ -415,7 +418,7 @@ a#scrolltop:hover {
   }
   section.monument article h3 {
     margin-top: 20px;
-    text-align: center;
+    text-align: left;
   }
 }
 /*--------------- MEDIA QUERY 425px ----------------*/
@@ -425,10 +428,7 @@ a#scrolltop:hover {
     padding: 20px 20px 20px;
   }
   section img {
-    margin: 20px 0 0 ;
-  }
-  header {
-    height: 702px;
+    margin: 20px 0 0;
   }
   .gallerie article.container .box-img .imgbx.active {
     overflow: hidden;
