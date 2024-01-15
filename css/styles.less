@@ -376,6 +376,7 @@ a#scrolltop{
 	
 	/*BURGER*/
 	.burger {
+		cursor: pointer;
 		display: block;
 		position : fixed;
 		top: 0.25rem;
@@ -385,23 +386,30 @@ a#scrolltop{
 		height: 3rem;
 		background-color: #dd4e7a;
 		z-index: 9999;
-		::before{
+		span{
+			position: absolute;
+			width: 1.875rem;
+			height: 2px;
+			top: 50%;
+			left: 50%;
+			background-color: #3faba8;
+			transform: translate(-50%; -50%);
+			transition: all 0.3s ease-in-out;
+		}
+		::before , ::after{
 			content: "";
 			position: absolute;
 			display: block;
 			width: 1.875rem;
-			height: 1rem;
+			height: 2px;
 			background-color: #3faba8;
 			transition: all 0.3s ease-in-out;
 		}
+		::before{
+			top: -0.625rem;
+		}
 		::after{
-			content: "";
-			position: absolute;
-			display: block;
-			width: 1.875rem;
-			height: 2rem;
-			background-color: #3faba8;
-			transition: all 0.3s ease-in-out;
+			top: 0.625rem;
 		}
 		&.burger-open {
 			span {

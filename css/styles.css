@@ -320,6 +320,7 @@ a#scrolltop:hover {
   }
   /*BURGER*/
   .burger {
+    cursor: pointer;
     display: block;
     position: fixed;
     top: 0.25rem;
@@ -330,23 +331,31 @@ a#scrolltop:hover {
     background-color: #dd4e7a;
     z-index: 9999;
   }
-  .burger ::before {
-    content: "";
+  .burger span {
     position: absolute;
-    display: block;
     width: 1.875rem;
-    height: 1rem;
+    height: 2px;
+    top: 50%;
+    left: 50%;
     background-color: #3faba8;
+    transform: translate(-50%, -50%);
     transition: all 0.3s ease-in-out;
   }
+  .burger ::before,
   .burger ::after {
     content: "";
     position: absolute;
     display: block;
     width: 1.875rem;
-    height: 2rem;
+    height: 2px;
     background-color: #3faba8;
     transition: all 0.3s ease-in-out;
+  }
+  .burger ::before {
+    top: -0.625rem;
+  }
+  .burger ::after {
+    top: 0.625rem;
   }
   .burger.burger-open span {
     background-color: transparent;
